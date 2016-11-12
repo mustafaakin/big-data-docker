@@ -1,4 +1,4 @@
-FROM java
+FROM mustafaakin/java
 
 # Set versions
 ARG HADOOP_LINK=http://ftp.itu.edu.tr/Mirror/Apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
@@ -6,9 +6,7 @@ ENV HADOOP_HOME /opt/hadoop/
 
 
 # Download and extract, set home folder and permissions
-RUN useradd -ms /bin/bash hadoop --home $HADOOP_HOME
-RUN wget -qO- $HADOOP_LINK | tar xvz --strip 1 -C $HADOOP_HOME
-RUN chown hadoop -R $HADOOP_HOME
+RUN useradd -ms /bin/bash hadoop --home $HADOOP_HOME && wget -qO- $HADOOP_LINK | tar xvz --strip 1 -C $HADOOP_HOME && chown hadoop -R $HADOOP_HOME
 RUN mkdir -p /data && chown hadoop /data
 
 USER hadoop
