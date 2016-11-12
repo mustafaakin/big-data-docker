@@ -1,9 +1,20 @@
 #!/bin/bash
+set -e 
+
 echo "# Building Java"
-docker build -t java        java/
+docker build -q -t mustafaakin-java        java/
 
 echo "# Building Zoookeeper"
-docker build -t zookeeper   zookeeper/
+docker build -q -t mustafaakin-zookeeper   zookeeper/
 
 echo "# Building Kafka"
-docker build -t kafka       kafka/
+docker build -q -t mustafaakin-kafka       kafka/
+
+echo "# Building Hadoop"
+docker build -q -t mustafaakin-hadoop      hadoop/
+
+echo "# Building Flink"
+docker build -q -t mustafaakin-flink       flink/
+
+echo "# Building Drill"
+docker build -q -t mustafaakin-drill       drill/

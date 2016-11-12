@@ -1,7 +1,16 @@
+# For >= Flink 1.2
 high-availability: zookeeper
 high-availability.zookeeper.quorum: %ZKHOSTS%
 high-availability.zookeeper.storageDir: hdfs://%HDFS%/%HASTORAGEDIR%
 high-availability.zookeeper.path.root: %ZKROOT%
+
+# For < Flink 1.2
+recovery.mode: zookeeper
+recovery.zookeeper.quorum: %ZKHOSTS%
+recovery.zookeeper.storageDir: hdfs://%HDFS%/%HASTORAGEDIR%
+recovery.zookeeper.path.root: %ZKROOT%
+
+
 jobmanager.rpc.port: 6123
 jobmanager.heap.mb: 1536
 taskmanager.heap.mb: 1536
