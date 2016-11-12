@@ -1,0 +1,25 @@
+<configuration>
+  <property>
+    <name>dfs.name.dir</name>
+    <value>file:///data/hadoop-name</value>
+  </property>
+  <property>
+    <name>dfs.data.dir</name>
+    <value>file:///data/hadoop-data</value>
+  </property>
+
+  <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+
+  <property>
+    <name>dfs.permissions</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+    <value>false</value>
+  </property>
+</configuration>

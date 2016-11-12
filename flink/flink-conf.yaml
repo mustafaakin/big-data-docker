@@ -1,0 +1,14 @@
+high-availability: zookeeper
+high-availability.zookeeper.quorum: %ZKHOSTS%
+high-availability.zookeeper.storageDir: hdfs://%HDFS%/%HASTORAGEDIR%
+high-availability.zookeeper.path.root: %ZKROOT%
+jobmanager.rpc.port: 6123
+jobmanager.heap.mb: 1536
+taskmanager.heap.mb: 1536
+taskmanager.numberOfTaskSlots: %SLOTS%
+taskmanager.memory.preallocate: false
+parallelism.default: 1
+jobmanager.web.port: 8081
+state.backend: filesystem
+state.backend.fs.checkpointdir: hdfs://%HDFS%/%CHECKPOINTDIR%
+taskmanager.network.numberOfBuffers: 4096
