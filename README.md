@@ -89,7 +89,7 @@ for i in {1..3}; do
          -e SLOTS=$SLOTS \
          -e CHECKPOINTDIR=$CHECKPOINTDIR \
          -e IFACE=$IFACE \
-         flink jobmanager
+         mustafaakin/flink jobmanager
 done
 for i in {1..8}; do
     docker run -d --net=mynet \
@@ -101,7 +101,7 @@ for i in {1..8}; do
          -e SLOTS=$SLOTS \
          -e CHECKPOINTDIR=$CHECKPOINTDIR \
          -e IFACE=$IFACE \
-         flink taskmanager
+         mustafaakin/flink taskmanager
 done
 ```
 
@@ -115,7 +115,7 @@ for i in {1..10}; do
         --name=drill$i \
          -e ZKHOSTS=$ZKHOSTS \
          -e CLUSTERID=$CLUSTERID \
-         drill
+         mustafaakin/drill
 done
 ```
 
