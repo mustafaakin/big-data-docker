@@ -1,6 +1,6 @@
 # big-data-docker
 
-Better, container friendly big-data images for Docker. You can read the reasoning and discussuion [my blog]().
+Better, container friendly big-data images for Docker. You can read the reasoning and discussuion [my blog](https://medium.com/@mustafaakin/doing-some-big-data-tools-docker-images-right-e3bfee92242a).
 
 ## An example invocation of the Docker images
 
